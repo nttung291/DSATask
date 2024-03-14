@@ -1,0 +1,40 @@
+{
+    "platforms": {},
+    "plugins": {},
+    "extendsTemplate": "@rnv/template-starter/renative.json",
+    "projectName": "DSATask",
+    "workspaceID": "rnv",
+    "defaults": {
+        "title": "DSATask",
+        "id": "com.mycompany.dsatask",
+        "supportedPlatforms": [
+            "ios",
+            "android",
+            "androidtv",
+            "firetv",
+            "androidwear",
+            "web",
+            "webtv",
+            "tizen",
+            "tvos",
+            "webos",
+            "macos",
+            "windows",
+            "tizenwatch",
+            "tizenmobile",
+            "kaios",
+            "firefoxos",
+            "firefoxtv",
+            "chromecast"
+        ]
+    },
+    "engines": {},
+    "templates": {
+        "@rnv/template-starter": {
+            "version": "0.37.0"
+        }
+    },
+    "currentTemplate": "@rnv/template-starter",
+    "isNew": true,
+    "isMonorepo": false
+}
