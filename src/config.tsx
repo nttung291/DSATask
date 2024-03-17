@@ -8,8 +8,6 @@ import {
   isPlatformWeb,
 } from '@rnv/renative';
 import '../platformAssets/runtime/fontManager';
-import CONFIG from '../platformAssets/renative.runtime.json';
-import ICON_LOGO from '../platformAssets/runtime/logo.png';
 
 export function testProps(testId: string | undefined) {
   if (!testId) {
@@ -198,7 +196,5 @@ export function ThemeProvider({ children }) {
 }
 
 export const themeStyles = themes.dark.styles;
-
-export { CONFIG, ICON_LOGO };
 
 export default staticThemes.dark;
