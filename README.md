@@ -37,7 +37,7 @@ DSATask
 
 ## Installation Renative
 
-npm install rnv -g
+`npm install rnv -g`
 https://renative.org/docs/overview/installation
 
 ## Running IOS
