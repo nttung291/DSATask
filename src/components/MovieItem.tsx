@@ -1,7 +1,7 @@
-import { Movie } from '../../../types';
+import { Movie } from '../types';
 import React, { useContext } from 'react';
 import { Image, Text, View } from 'react-native';
-import { ThemeContext } from '../../../config';
+import { ThemeContext } from '../config';
 
 interface MovieItemProps {
   item: Movie;

@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { View, StyleSheet, Animated, Platform, Image } from 'react-native';
-import { Movie } from '../../../../types';
+import { Movie } from '../../types';
 import {
   W_WIDTH,
   getCarouselWidth,
   getCarouselHeight,
   getCarouselRatio,
   W_HEIGHT,
-} from '../../../../helpers/device';
+} from '../../helpers/device';
 import { isEmpty } from 'lodash';
 import { getScaledValue } from '@rnv/renative';
 

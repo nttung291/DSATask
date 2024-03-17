@@ -3,11 +3,11 @@ import { ActivityIndicator, FlatList, ScrollView, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../state/store';
 import { fetchWeekTop10Movies } from '../../state/reducers/movie';
-import { MovieItem } from './components/MovieItem';
+import { MovieItem } from '../../components/MovieItem';
 import { ThemeContext } from '../../config';
 import { W_WIDTH } from '../../helpers/device';
 import { formatData, calcNumColumns } from '../../helpers/utils';
-import { MoviesCarousel } from './components/CarousellList';
+import { MoviesCarousel } from '../../components/CarousellList';
 
 export const HomeScreen: React.FunctionComponent = () => {
   const { theme }: any = useContext(ThemeContext);
