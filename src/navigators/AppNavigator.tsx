@@ -4,7 +4,7 @@ import {
   NativeStackScreenProps,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
-import { HomeScreen } from '@screens';
+import { HomeScreen } from '../screens';
 import { RootStackParamList } from '../types';
 
 interface NavigationProps
