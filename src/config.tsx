@@ -7,8 +7,8 @@ import {
   isPlatformTvos,
   isPlatformWeb,
 } from '@rnv/renative';
-import CONFIG from '../platformAssets/renative.runtime.json';
 import '../platformAssets/runtime/fontManager';
+import CONFIG from '../platformAssets/renative.runtime.json';
 import ICON_LOGO from '../platformAssets/runtime/logo.png';
 
 export function testProps(testId: string | undefined) {

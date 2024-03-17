@@ -4,8 +4,10 @@ Currently includes:
 
 - React Native
 - React Navigation
+- React Native Web
+- NextJs
 - TypeScript
-- ReNative
+- Renative
 - And more!
 
 ## Quick Start
@@ -28,6 +30,7 @@ DSATask
 │   ├── state
 │   ├── storage
 │   ├── types
+│   ├── config.tsx
 ├── README.md
 ├── index.js
 ├── renative.json
@@ -35,10 +38,14 @@ DSATask
 
 ```
 
-## Installation Renative
+## Installing Renative
 
 `npm install rnv -g`
 https://renative.org/docs/overview/installation
+
+## Installing
+
+From root run `yarn intall`
 
 ## Running IOS
 
@@ -46,13 +53,13 @@ From the command line in your generated app's root directory, enter `yarn rnv ru
 
 ## Running Android
 
-From the command line in your generated app's root directory, enter `yarn run -p android`
+From the command line in your generated app's root directory, enter `yarn rnv run -p android`
 
 ## Running Web
 
-From the command line in your generated app's root directory, enter `yarn run -p web`
+From the command line in your generated app's root directory, enter `yarn rnv run -p web`
 
 ## Running TV
 
 Check the platform is supported: https://renative.org/docs/overview
-From the command line in your generated app's root directory, enter `yarn run -p platform`
+From the command line in your generated app's root directory, enter `yarn rnv run -p platform`
