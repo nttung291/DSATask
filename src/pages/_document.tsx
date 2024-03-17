@@ -1,13 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import React from 'react';
-import { CONFIG } from '../config';
 
 class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-          <meta name="description" content={CONFIG.welcomeMessage} />
+          <meta name="description" content={'Welcome'} />
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <body>

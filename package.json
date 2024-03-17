@@ -24,9 +24,11 @@
     },
     "browserslist": {
         "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
+            "chrome >= 67",
+            "edge >= 79",
+            "firefox >= 68",
+            "opera >= 54",
+            "safari >= 14"
         ],
         "development": [
             "last 1 chrome version",
@@ -35,7 +37,8 @@
         ]
     },
     "resolutions": {
-        "@babel/traverse": "7.15.0",
+        "@babel/traverse": "7.23.2",
+        "@babel/core": "^7.20.0",
         "@types/react": "17.0.2",
         "@types/react-dom": "17.0.2"
     },
