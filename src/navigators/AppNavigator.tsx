@@ -1,0 +1,39 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import {
+  NativeStackScreenProps,
+  createNativeStackNavigator,
+} from '@react-navigation/native-stack';
+import { HomeScreen } from '../screens';
+import { RootStackParamList } from '../types';
+
+interface NavigationProps
+  extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
+
+const defaultOptions: NativeStackScreenProps = {
+  headerShown: false,
+};
+
+export const enum ScreenNavigatorKeys {
+  HomeScreen = 'Home',
+}
+const AppStack = createNativeStackNavigator<RootStackParamList>();
+export function ScreensNavigator() {
+  return (
+    <AppStack.Navigator initialRouteName={ScreenNavigatorKeys.HomeScreen}>
+      <AppStack.Screen
+        name={ScreenNavigatorKeys.HomeScreen}
+        component={HomeScreen}
+        options={defaultOptions}
+      />
+    </AppStack.Navigator>
+  );
+}
+
+export const AppNavigator = (props: NavigationProps) => {
+  return (
+    <NavigationContainer {...props}>
+      <ScreensNavigator />
+    </NavigationContainer>
+  );
+};

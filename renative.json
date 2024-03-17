@@ -1,6 +1,18 @@
 {
     "platforms": {},
-    "plugins": {},
+    "plugins": {
+        "@react-native-community/cli-platform-ios": "source:rnv",
+        "@react-native-community/cli": "source:rnv",
+        "react-native-tvos": "source:rnv",
+        "react-native-web": "source:rnv",
+        "next": "source:rnv",
+        "@lightningjs/sdk": "source:rnv",
+        "react-native-screens": "source:rnv",
+        "@react-navigation/core": "source:rnv",
+        "@react-navigation/stack": "source:rnv",
+        "@react-navigation/web": "source:rnv",
+        "react-native-safe-area-context": "source:rnv"
+    },
     "extendsTemplate": "@rnv/template-starter/renative.json",
     "projectName": "DSATask",
     "workspaceID": "rnv",
@@ -35,6 +47,5 @@
         }
     },
     "currentTemplate": "@rnv/template-starter",
-    "isNew": true,
     "isMonorepo": false
 }
