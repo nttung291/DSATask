@@ -72,6 +72,7 @@ export const getCarouselHeight = () => {
 export const getCarouselRatio = () => {
   switch (true) {
     case isFactorTv:
+      return 0.7;
     case isFactorBrowser:
     case isFactorDesktop:
       return 0.8;

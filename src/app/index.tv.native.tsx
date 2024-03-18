@@ -6,7 +6,7 @@ import { store } from '../state/store';
 import { AppNavigator } from '../navigators';
 
 import { enableScreens } from 'react-native-screens';
-import { HomeScreen } from '../screens';
+
 enableScreens();
 
 const App = () => (

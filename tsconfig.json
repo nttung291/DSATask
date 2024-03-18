@@ -6,5 +6,5 @@
       "noImplicitAny": false
       // "resolveJsonModule": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/app/index.tv.native.tsx"]
 }

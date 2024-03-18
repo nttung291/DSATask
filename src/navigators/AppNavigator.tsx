@@ -4,6 +4,7 @@ import {
   NativeStackScreenProps,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { HomeScreen } from '../screens';
 import { RootStackParamList } from '../types';
 
@@ -32,8 +33,10 @@ export function ScreensNavigator() {
 
 export const AppNavigator = (props: NavigationProps) => {
   return (
-    <NavigationContainer {...props}>
-      <ScreensNavigator />
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer {...props}>
+        <ScreensNavigator />
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
