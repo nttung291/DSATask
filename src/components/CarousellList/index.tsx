@@ -3,10 +3,10 @@ import { View, StyleSheet, Animated, Platform, Image } from 'react-native';
 import { Movie } from '../../types';
 import {
   W_WIDTH,
+  W_HEIGHT,
   getCarouselWidth,
   getCarouselHeight,
   getCarouselRatio,
-  W_HEIGHT,
 } from '../../helpers/device';
 import { isEmpty } from 'lodash';
 import { getScaledValue } from '@rnv/renative';

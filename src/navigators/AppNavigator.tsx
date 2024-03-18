@@ -1,9 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import {
-  NativeStackScreenProps,
-  createNativeStackNavigator,
-} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { HomeScreen } from '../screens';
 import { RootStackParamList } from '../types';
@@ -11,7 +8,7 @@ import { RootStackParamList } from '../types';
 interface NavigationProps
   extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
 
-const defaultOptions: NativeStackScreenProps = {
+const defaultOptions = {
   headerShown: false,
 };
 

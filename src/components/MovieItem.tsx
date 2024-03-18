@@ -4,7 +4,7 @@ import { Image, Text, View } from 'react-native';
 import { ThemeContext } from '../config';
 
 interface MovieItemProps {
-  item: Movie;
+  item: Movie & { empty?: boolean };
 }
 
 export const MovieItem: React.FC<MovieItemProps> = ({
