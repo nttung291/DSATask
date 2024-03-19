@@ -49,11 +49,11 @@ export const getCarouselWidth = () => {
     case isFactorTv:
     case isFactorBrowser:
     case isFactorDesktop:
-      return getScaledValue(W_WIDTH * 0.15);
+      return s(100);
     case isFactorMobile:
-      return getScaledValue(W_WIDTH * 0.5);
+      return s(200);
     default:
-      return getScaledValue(W_WIDTH * 0.5);
+      return s(150);
   }
 };
 export const getCarouselHeight = () => {
@@ -61,24 +61,10 @@ export const getCarouselHeight = () => {
     case isFactorTv:
     case isFactorBrowser:
     case isFactorDesktop:
-      return getScaledValue((W_WIDTH * 0.15) / imageResolution);
+      return s(100) / imageResolution;
     case isFactorMobile:
-      return getScaledValue((W_WIDTH * 0.5) / imageResolution);
+      return s(200) / imageResolution;
     default:
-      return getScaledValue((W_WIDTH * 0.5) / imageResolution);
-  }
-};
-
-export const getCarouselRatio = () => {
-  switch (true) {
-    case isFactorTv:
-      return 0.7;
-    case isFactorBrowser:
-    case isFactorDesktop:
-      return 0.8;
-    case isFactorMobile:
-      return 0.5;
-    default:
-      return 0.5;
+      return s(200) / imageResolution;
   }
 };

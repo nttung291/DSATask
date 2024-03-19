@@ -3,13 +3,11 @@ import { View, StyleSheet, Animated, Platform, Image } from 'react-native';
 import { Movie } from '../../types';
 import {
   W_WIDTH,
-  W_HEIGHT,
   getCarouselWidth,
   getCarouselHeight,
-  getCarouselRatio,
+  vs,
 } from '../../helpers/device';
 import { isEmpty } from 'lodash';
-import { getScaledValue } from '@rnv/renative';
 
 const SPACING = 10;
 
@@ -23,7 +21,6 @@ export const MoviesCarousel: React.FC<MoviesCarouselProps> = props => {
   const scrollX = useRef(new Animated.Value(0)).current;
   const carouselWidth = getCarouselWidth();
   const carouselHeight = getCarouselHeight();
-  const carouselRatio = getCarouselRatio();
   const EMPTY_ITEM_SIZE = (W_WIDTH - carouselWidth) / 2;
 
   useEffect(() => {
@@ -42,13 +39,12 @@ export const MoviesCarousel: React.FC<MoviesCarouselProps> = props => {
         data={movies}
         keyExtractor={item => item?.id}
         horizontal
-        style={{ height: getScaledValue(W_HEIGHT * carouselRatio) }}
+        contentContainerStyle={{ height: carouselHeight + vs(120) }}
         bounces={false}
         decelerationRate={Platform.OS === 'ios' ? 0 : 0.98}
         renderToHardwareTextureAndroid
         snapToInterval={carouselWidth}
         showsHorizontalScrollIndicator={false}
-        snapToAlignment="start"
         scrollEventThrottle={16}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { x: scrollX } } }],
@@ -73,7 +69,11 @@ export const MoviesCarousel: React.FC<MoviesCarouselProps> = props => {
           });
 
           return (
-            <View style={{ width: carouselWidth, height: carouselHeight }}>
+            <View
+              style={{
+                width: carouselWidth,
+                height: carouselHeight,
+              }}>
               <Animated.View
                 style={[
                   styles.carouselContainer,
@@ -101,7 +101,6 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    marginTop: getScaledValue(-20),
   },
   carouselContainer: {
     flex: 1,
@@ -112,9 +111,10 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   posterImage: {
-    height: '100%',
     width: '100%',
+    height: '100%',
     resizeMode: 'cover',
     borderRadius: 12,
+    paddingTop: 100,
   },
 });
