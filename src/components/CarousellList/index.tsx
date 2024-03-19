@@ -39,7 +39,10 @@ export const MoviesCarousel: React.FC<MoviesCarouselProps> = props => {
         data={movies}
         keyExtractor={item => item?.id}
         horizontal
-        contentContainerStyle={{ height: carouselHeight + vs(120) }}
+        contentContainerStyle={{
+          height: carouselHeight + vs(120),
+          marginTop: vs(-10),
+        }}
         bounces={false}
         decelerationRate={Platform.OS === 'ios' ? 0 : 0.98}
         renderToHardwareTextureAndroid
